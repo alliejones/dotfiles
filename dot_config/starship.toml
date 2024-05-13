@@ -1,0 +1,59 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+$username\
+$directory\
+(\
+$git_branch\
+$git_status\
+)\
+[](fg:night_2)\
+$fill\
+$nodejs\
+$line_break$character"""
+
+palette = 'nord'
+
+[palettes.nord]
+night_1 = '#2E3440'
+night_2 = '#3B4252'
+night_3 = '#434C5E'
+night_4 = '#4C566A'
+snow_1 = '#D8DEE9'
+snow_2 = '#E5E9F0'
+snow_3 = '#ECEFF4'
+frost_1 = '#8FBCBB'
+frost_2 = '#88C0D0'
+frost_3 = '#81A1C1'
+frost_4 = '#5E81AC'
+red = '#BF616A'
+orange = '#D08770'
+yellow = '#EBCB8B'
+green = '#A3BE8C'
+purple = '#B48EAD'
+
+[username]
+show_always = true
+style_user = 'bg:frost_4'
+format = '[ $user ]($style)[](fg:frost_4 bg:night_4)'
+
+[directory]
+style = 'bg:night_4'
+format = "[ $path ]($style)[](fg:night_4 bg:night_2)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[git_branch]
+format = '[ $branch ]($style bg:night_2)'
+
+[git_status]
+format = '[($all_status$ahead_behind )]($style bg:night_2)'
+
+[nodejs]
+format = ' [node $version]($style)(night_4)'
+
+[line_break]
+disabled = false
+
+[fill]
+symbol = ' '
