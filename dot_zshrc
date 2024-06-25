@@ -7,6 +7,10 @@ export NVM_DIR="$HOME/.nvm"
 autoload -U add-zsh-hook
 
 load-nvmrc() {
+  if ! [ -x "$(command -v nvm)" ]; then
+    return
+  fi
+
   local nvmrc_path
   nvmrc_path="$(nvm_find_nvmrc)"
 
