@@ -29,6 +29,10 @@ load-nvmrc() {
   fi
 }
 
+{{ if eq (joinPath .chezmoi.homeDir ".zshrc_local" | lstat).type "file" }}
+{{ include (joinPath .chezmoi.homeDir ".zshrc_local") }}
+{{ end }}
+
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
