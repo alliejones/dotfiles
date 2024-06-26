@@ -7,5 +7,16 @@
 [user]
 	name = "Allie Jones"
 	email = {{ .email | quote }}
+{{ if eq .usage "work" }}
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIO59mkZtTlU/g2rScm94egtiSDaRxnbF8j/4qU+9gKDF allie.jones+git-commit-signing@datadoghq.com
+
 [url "git@github.com:"]
     insteadOf = https://github.com/
+
+[commit]
+	gpgsign = true
+[gpg]
+	format = ssh
+[core]
+	hooksPath = /usr/local/dd/global_hooks
+{{ end }}

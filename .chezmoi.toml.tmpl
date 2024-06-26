@@ -1,7 +1,9 @@
 {{- $email := promptStringOnce . "email" "Email address" -}}
+{{- $usage := promptStringOnce . "usage" "Usage" -}}
 
 [data]
     email = {{ $email | quote }}
+    usage = {{ $usage | quote }}
 
 [edit]
     command = "code"
