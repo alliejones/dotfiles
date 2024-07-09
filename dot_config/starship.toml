@@ -14,6 +14,8 @@ $line_break$character"""
 
 palette = 'nord'
 
+command_timeout = 1000
+
 [palettes.nord]
 night_1 = '#2E3440'
 night_2 = '#3B4252'
