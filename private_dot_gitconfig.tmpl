@@ -6,6 +6,7 @@
 	pfwl = push --force-with-lease
 	cane = commit --amend --no-edit
 	mc = machete
+	mcri = !git rebase -i \"$(git machete fork-point)\"
 [pull]
 	rebase = true
 [rebase]
