@@ -31,7 +31,7 @@ load-nvmrc() {
   fi
 }
 
-{{ if eq (joinPath .chezmoi.homeDir ".zshrc_local" | lstat).type "file" }}
+{{ if stat (joinPath .chezmoi.homeDir ".zshrc_local") }}
 {{ include (joinPath .chezmoi.homeDir ".zshrc_local") }}
 {{ end }}
 
