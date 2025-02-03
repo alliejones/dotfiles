@@ -8,6 +8,7 @@
 	mc = machete
 	mcri = !git rebase -i \"$(git machete fork-point)\"
 	mcpr = machete github create-pr --draft --yes
+	wip = commit -m \"WIP\" --no-verify
 [pull]
 	rebase = true
 [rebase]
@@ -20,7 +21,7 @@
 	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIO59mkZtTlU/g2rScm94egtiSDaRxnbF8j/4qU+9gKDF allie.jones+git-commit-signing@datadoghq.com
 
 [url "git@github.com:"]
-    insteadOf = https://github.com/
+	insteadOf = https://github.com/
 
 [commit]
 	gpgsign = true
